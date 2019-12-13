@@ -10,9 +10,8 @@ logger = logging.getLogger(__name__)
 
 
 def profile(request, id):
-    logger.debug(
-        "id={}".format(id)
-    )
+
+    logger.debug("id={}".format(id))
 
     try:
         person = Person.objects.get(pk=id)

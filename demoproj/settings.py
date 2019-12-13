@@ -132,7 +132,7 @@ LOGGING = {
     },
     'formatters': {
         'syslog': {
-            'format': '%(levelname)-6s %(name)-8s %(message)s',
+            'format': '%(message)s',
         },
     },
     'loggers': {
@@ -140,5 +140,5 @@ LOGGING = {
             'handlers': ['syslog'],
             'level': 'DEBUG'
         },
-    }   
+    }
 }
