@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 
 def profile(request):
-    pass
+    render(request, 'demoapp/profile.html')
 
 
 def stats(request):
-    pass
+    render(request, 'demoapp/stats.html')

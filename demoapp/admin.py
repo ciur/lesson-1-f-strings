@@ -9,4 +9,4 @@ class PersonAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.Register(Person, PersonAdmin)
+admin.site.register(Person, PersonAdmin)
