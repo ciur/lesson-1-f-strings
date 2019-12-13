@@ -14,11 +14,3 @@ class Person(models.Model):
     elo_rating = models.IntegerField()
     total_games_count = models.IntegerField()
     complete_games_count = models.IntegerField()
-
-    def __str__(self):
-        return "#{}. {} {} {}".format(
-            self.pk,
-            self.first_name,
-            self.last_name,
-            self.birth_date
-        )

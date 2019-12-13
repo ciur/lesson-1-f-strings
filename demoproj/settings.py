@@ -119,3 +119,26 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+LOGGING = {
+    'version': 1,
+    'handlers': {
+        'syslog': {
+            'class': 'logging.handlers.SysLogHandler',
+            'formatter': 'syslog',
+            'address': '/dev/log',
+        },
+    },
+    'formatters': {
+        'syslog': {
+            'format': '%(levelname)-6s %(name)-8s %(message)s',
+        },
+    },
+    'loggers': {
+        'demoapp': {
+            'handlers': ['syslog'],
+            'level': 'DEBUG'
+        },
+    }   
+}
