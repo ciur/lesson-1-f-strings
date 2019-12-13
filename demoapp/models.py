@@ -9,7 +9,7 @@ class Person(models.Model):
     last_name = models.CharField(
         max_length=100
     )
-    age = models.IntegerField()
+    birth_date = models.DateField()
 
     elo_rating = models.IntegerField()
     total_games_count = models.IntegerField()
