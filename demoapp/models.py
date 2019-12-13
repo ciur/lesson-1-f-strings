@@ -16,7 +16,8 @@ class Person(models.Model):
     complete_games_count = models.IntegerField()
 
     def __str__(self):
-        return "{} {} {}".format(
+        return "#{}. {} {} {}".format(
+            self.pk,
             self.first_name,
             self.last_name,
             self.birth_date
