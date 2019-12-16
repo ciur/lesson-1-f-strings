@@ -5,5 +5,4 @@ from demoapp import views as demo_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('demoapp/profile/<int:id>', demo_views.profile, name="profile"),
-    path('demoapp/stats/<int:id>', demo_views.stats, name="stats")
 ]

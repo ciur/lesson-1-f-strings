@@ -11,29 +11,19 @@ logger = logging.getLogger(__name__)
 
 def profile(request, id):
 
-    logger.debug("id={}".format(id))
+    message = ("Some error message", 255)
+
+    logger.debug(f"id={id}")
 
     try:
         person = Person.objects.get(pk=id)
     except Person.DoesNotExist:
         raise Http404("Profile not found")
 
+    logger.debug(f"msg={message}")
+
     return render(
         request,
         'demoapp/profile.html',
         {'person': person}
     )
-
-
-def stats(request, id):
-    try:
-        person = Person.objects.get(pk=id)
-    except Person.DoesNotExist:
-        raise Http404("Person not found")
-
-    return render(
-        request,
-        'demoapp/stats.html',
-        {'person': person}
-    )
-

@@ -132,7 +132,7 @@ LOGGING = {
     },
     'formatters': {
         'syslog': {
-            'format': '%(message)s',
+            'format': '%(levelname)-6s %(name)-8s %(message)s',
         },
     },
     'loggers': {
